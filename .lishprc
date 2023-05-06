@@ -1,0 +1,20 @@
+; vi: ft=lisp
+
+(alias ls ls --color)
+(alias diff diff --color=auto)
+(alias grep grep --color=auto)
+(alias ip ip --color=auto)
+(alias icat kitty +kitten icat)
+(alias ssh kitty +kitten ssh)
+(alias dit /usr/bin/git --git-dir=/home/devin/.cfg/ --work-tree=/home/devin)
+
+(export PATH (append
+    (getenv PATH)
+    :/home/devin/.cargo/bin:/home/devin/bin:/home/devin/.local/bin))
+
+(def lishp_prompt
+    (replace
+        (append
+            (first (pwd))
+            "\n\x1b[35;5;1m❯\x1b[0m ")
+        /home/devin ~))

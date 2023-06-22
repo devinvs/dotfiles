@@ -1,0 +1,22 @@
+"ui.background" = "black"
+"ui.text" = "white"
+"ui.selection" = { bg = "light-gray" }
+"ui.linenr" = "magenta"
+
+[pallete]
+white = "#f2f2f2"
+black = "#1a1a1a"
+red = "#dd4e4e"
+green = "#6e9f57"
+yellow = "#de8b50"
+blue = "#5b8bd6"
+magenta = "#a56cc4"
+cyan = "#72c2c4"
+gray = "#424242"
+light-red = "#f35656"
+light-green = "#83bd68"
+light-yellow = "#f0cb74"
+light-blue = "#689ef3"
+light-magenta = "#c782ec"
+light-cyan = "#72c2c4"
+light-gray = "#d2d2d2"

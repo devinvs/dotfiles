@@ -1,7 +1,31 @@
 "ui.background" = "black"
 "ui.text" = "white"
 "ui.selection" = { bg = "light-gray" }
-"ui.linenr" = "magenta"
+"ui.linenr" = "gray"
+"ui.text.info" = "magenta"
+"ui.statusline" = "magenta"
+
+comment = "gray"
+"function" = "blue"
+"function.macro" = "magenta"
+"keyword" = "magenta"
+"type" = "light-yellow"
+"type.builtin" = "yellow"
+"constant" = "yellow"
+"constant.character.escape" = "red"
+"string" = "light-green"
+"variable.builtin" = "yellow"
+"operator" = "cyan"
+"keyword.storage.modifier" = "yellow"
+
+"markup.heading" = "cyan"
+"markup.italic" = { modifiers=["italic"] }
+"markup.bold" = { modifiers=["bold"] }
+
+"diagnostic" = { modifiers = ["underlined"]}
+"error" = "red"
+"warning" = "yellow"
+"info" = "cyan"
 
 [pallete]
 white = "#f2f2f2"
@@ -20,3 +44,4 @@ light-blue = "#689ef3"
 light-magenta = "#c782ec"
 light-cyan = "#72c2c4"
 light-gray = "#d2d2d2"
+

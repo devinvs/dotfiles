@@ -8,13 +8,25 @@
 (alias ssh kitty +kitten ssh)
 (alias dit /usr/bin/git --git-dir=/home/devin/.cfg/ --work-tree=/home/devin)
 
-(export PATH (append
+(export PATH (sappend
     (getenv PATH)
     :/home/devin/.cargo/bin:/home/devin/bin:/home/devin/.local/bin))
 
 (def lishp_prompt
     (replace
-        (append
+        (sappend
             (first (pwd))
             "\n\x1b[35;5;1m❯\x1b[0m ")
         /home/devin ~))
+
+(defun battery ()
+    (sappend (take 4
+        (* 100
+            (/ (cat /sys/class/power_supply/BAT1/charge_now)
+               (cat /sys/class/power_supply/BAT1/charge_full)))) %))
+
+(defun brightness ()
+    (sappend (take 4
+        (* 100
+            (/ (cat /sys/class/backlight/intel_backlight/brightness)
+               (cat /sys/class/backlight/intel_backlight/max_brightness)))) %))

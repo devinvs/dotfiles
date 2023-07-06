@@ -21,7 +21,7 @@ set $term kitty
 set $menu rofi -show drun
 
 gaps outer 0
-gaps inner 30
+gaps inner 20
 
 default_border pixel 0
 
@@ -31,29 +31,36 @@ for_window [window_role="pop-up"] floating enable
 for_window [title="Firefox — Sharing Indicator"] floating enable
 
 # Did someone say borders???
-border_images.focused /home/devin/.config/sway/active.png
-border_images.focused_inactive /home/devin/.config/sway/border.png
-border_images.unfocused /home/devin/.config/sway/border.png
-border_images.urgent /home/devin/.config/sway/border.png
+#border_images.focused /home/devin/.config/sway/active.png
+#border_images.focused_inactive /home/devin/.config/sway/border.png
+#border_images.unfocused /home/devin/.config/sway/border.png
+#border_images.urgent /home/devin/.config/sway/border.png
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 
-output DP-1 {
-    resolution 3840x2160 position 0,0
-	bg /home/devin/pictures/right.jpg fill
-    scale 2
-    max_render_time 1
-    adaptive_sync on
+output * bg ~/pictures/calvin.png fill
+
+output eDP-1 {
+	resolution 2256x1504
+	scale 1.5
+	max_render_time 1
+	adaptive_sync on
+    position 0,0
 }
 
-output DP-2 {
-	resolution 3840x2160 position 1920,0
-	bg /home/devin/pictures/left.jpg fill
-    scale 2
-    max_render_time 1
-    adaptive_sync on
+output DP-5 {
+    position 3434,0
+}
+
+output DP-6 {
+    position 1504,0
+}
+
+input 2362:628:PIXA3854:00_093A:0274_Touchpad {
+	natural_scroll enabled
+	tap enabled
 }
 
 ### Idle configuration
@@ -243,5 +250,7 @@ exec easyeffects --gapplication-service
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec waybar
 exec /usr/bin/polkit-dumb-agent
+
+exec swaymsg "output * dpms on"
 
 exec "systemctl --user import-environment"

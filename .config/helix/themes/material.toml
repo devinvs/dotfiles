@@ -1,6 +1,7 @@
 "ui.background" = "black"
 "ui.text" = "white"
-"ui.selection" = { bg = "light-gray" }
+#"ui.selection" = { bg = "light-gray" }
+"ui.selection" = { modifiers = ["reversed"] }
 "ui.linenr" = "gray"
 "ui.text.info" = "magenta"
 "ui.statusline" = "magenta"

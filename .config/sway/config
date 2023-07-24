@@ -18,7 +18,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi -show drun
+set $menu wofi --show drun
 
 gaps outer 0
 gaps inner 20
@@ -40,7 +40,7 @@ for_window [title="Firefox — Sharing Indicator"] floating enable
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 
-output * bg ~/pictures/calvin.png fill
+# output * bg ~/pictures/calvin.png fill
 
 output eDP-1 {
 	resolution 2256x1504
@@ -252,5 +252,7 @@ exec waybar
 exec /usr/bin/polkit-dumb-agent
 
 exec swaymsg "output * dpms on"
+exec swww init
+exec swww img /home/devin/pictures/calm.gif
 
 exec "systemctl --user import-environment"

@@ -16,7 +16,7 @@
     (replace
         (sappend
             (first (pwd))
-            "\n\x1b[35;5;1m❯\x1b[0m ")
+            "\n\x1b[35;5;1mλ\x1b[0m ")
         /home/devin ~))
 
 (defun battery ()

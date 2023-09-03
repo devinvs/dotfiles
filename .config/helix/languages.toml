@@ -2,3 +2,14 @@
 name = "python"
 scope = "source.python"
 language-server = { command = "ruff-lsp" }
+
+[[language]]
+name = "stelt"
+scope = "source.stelt"
+file-types = ["st", "stelt"]
+comment-token = "//"
+roots = []
+
+[[grammar]]
+name = "stelt"
+source.path = "/home/devin/projects/tree-sitter-stelt"

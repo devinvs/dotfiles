@@ -1,4 +1,4 @@
-"ui.background" = "black"
+"ui.background"= "black"
 "ui.text" = "white"
 #"ui.selection" = { bg = "light-gray" }
 "ui.selection" = { modifiers = ["reversed"] }
@@ -12,6 +12,7 @@ comment = "gray"
 "keyword" = "magenta"
 "type" = "light-yellow"
 "type.builtin" = "yellow"
+"constructor" = "yellow"
 "constant" = "yellow"
 "constant.character.escape" = "red"
 "string" = "light-green"
